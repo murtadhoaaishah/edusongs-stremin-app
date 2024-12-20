@@ -1,0 +1,15 @@
+.hero1 {
+  background: url("../../../../public/images/young-baby-boy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* @apply bg-green; */
+}
+.hero2 {
+  background: url("../../../../public/images/friends.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* @apply bg-red; */
+}
+section {
+  @apply h-screen w-screen;
+}

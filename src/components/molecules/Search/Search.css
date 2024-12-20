@@ -1,0 +1,24 @@
+.search {
+  @apply flex flex-row justify-center items-center;
+}
+.search img {
+  @apply mr-2;
+}
+.search-input {
+  @apply flex border-b-2 border-b-ash text-ash;
+}
+.search-input_input {
+  @apply bg-transparent bg-none outline-none border-none text-base;
+}
+.search-input img {
+  @apply h-6;
+}
+/* .featured{
+  @apply h-
+}
+.title{
+  @apply h-[""]
+}
+.desc{
+  @apply h-[""]
+} */

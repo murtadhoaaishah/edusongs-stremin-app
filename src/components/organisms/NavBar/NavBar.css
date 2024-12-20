@@ -1,0 +1,12 @@
+nav {
+  @apply px-20 py-4 h-20  w-full flex items-center justify-between fixed top-0 z-50 transition-all duration-300;
+}
+.edusongs {
+  @apply text-2xl font-serif font-semibold text-green mr-20;
+}
+.nav-item-cont {
+  @apply flex flex-row items-center gap-6 text-white text-xs font-semibold;
+}
+.user-div {
+  @apply h-4 w-4 border border-white rounded-[50%]  flex items-center justify-center mr-8;
+}
