@@ -1,9 +1,7 @@
-import Hero from "../components/organisms/Hero";
+import Dashboard from "@/pages/Home";
 
 export default function Home() {
   return (
-    <div className="overflow-auto">
-      <Hero />
-    </div>
+    <Dashboard/>
   );
 }
