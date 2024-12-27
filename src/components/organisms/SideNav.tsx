@@ -13,34 +13,36 @@ import {
   Users,
   Video,
 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const SideNav = () => {
   const [sideNavExpanded, setSideNavExpanded] = useState(true);
-  
+
   const toggleExpanded = () => {
     setSideNavExpanded(!sideNavExpanded);
   };
 
   useEffect(() => {
     localStorage.setItem('sideNavExpanded', JSON.stringify(sideNavExpanded));
-  },[sideNavExpanded]);
+  }, [sideNavExpanded]);
 
   const menuItems = [
-    { icon: Home, label: 'Dashboard', badge: null },
-    { icon: Music, label: 'My Library', badge: '23' },
-    { icon: BookOpen, label: 'Courses', badge: '4' },
-    { icon: Video, label: 'Live Classes', badge: 'Live' },
-    { icon: Users, label: 'Study Groups', badge: null },
-    { icon: Camera, label: 'AR Learning', badge: 'New' },
-    { icon: Trophy, label: 'Achievements', badge: null },
-    { icon: PieChart, label: 'Analytics', badge: null },
-    { icon: Heart, label: 'Favorites', badge: null },
+    { icon: Home, label: 'Dashboard', badge: null, link: '/' },
+    { icon: Music, label: 'My Library', badge: '23', link: '/library' },
+    { icon: BookOpen, label: 'Courses', badge: '4', link: '/courses' },
+    { icon: Video, label: 'Live Classes', badge: 'Live', link: '/live' },
+    { icon: Users, label: 'Study Groups', badge: null, link: '/groups' },
+    { icon: Camera, label: 'AR Learning', badge: 'New', link: '/ar' },
+    { icon: Trophy, label: 'Achievements', badge: null, link: '/achievements' },
+    { icon: PieChart, label: 'Analytics', badge: null, link: '/analytics' },
+    { icon: Heart, label: 'Favorites', badge: null, link: '/favorites' },
   ];
 
+  const router = useRouter();
   return (
     <div
-      className={`h-screen  bg-white border-r border-gray-200 transition-all duration-300 z-50 
+      className={`h-screen  bg-white border-r border-gray-200 transition-all duration-300 flex flex-col 
       ${sideNavExpanded ? 'w-64' : 'w-20'}`}
     >
       <div className="flex items-center justify-between px-4 h-16 border-b border-gray-200">
@@ -61,6 +63,7 @@ const SideNav = () => {
       <div className="py-4">
         {menuItems.map((item, index) => (
           <button
+            onClick={() => router.push(item.link)}
             key={index}
             className="w-full flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700"
           >
@@ -87,8 +90,9 @@ const SideNav = () => {
           </button>
         ))}
       </div>
+      <p className="flex-grow" />
 
-      <div className="absolute bottom-0 w-full border-t border-gray-200">
+      <div className=" border-t border-gray-200">
         <button className="w-full flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700">
           <Settings className="h-5 w-5" />
           {sideNavExpanded && <span className="ml-3">Settings</span>}
