@@ -31,14 +31,12 @@ const LoginPage: React.FC = () => {
         <input
           type="email"
           id="email"
-          placeholder="Email"
-          className="block w-full my-1 text-gray-800 bg-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
+          placeholder="Email"     
         />
         <input
           type="password"
           id="password"
           placeholder="Password"
-          className="block w-full my-1 text-gray-800 bg-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
         />
         <a
           href="#"

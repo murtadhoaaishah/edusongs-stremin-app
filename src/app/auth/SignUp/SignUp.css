@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input {
+    @apply w-full my-1 text-black bg-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-green focus:border-gray-200
+}
+
+.link {
+    @apply text-navyBlue hover:text-green font-semibold;
+}

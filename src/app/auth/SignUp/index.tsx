@@ -12,36 +12,11 @@ const SignUp = () => {
 
       {/* Form Section */}
       <div className="my-10 mx-auto">
-        <input
-          type="text"
-          id="name"
-          placeholder="Name"
-          className="w-full my-1 text-black bg-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400"
-        />
-        <input
-          type="email"
-          id="email"
-          placeholder="Email"
-          className="w-full my-1 text-black bg-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400"
-        />
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          className="w-full my-1 text-black bg-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400"
-        />
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Phone"
-          className="w-full my-1 text-black bg-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-green focus:border-gray"
-        />
-        <input
-          type="text"
-          id="address"
-          placeholder="Address"
-          className="w-full my-1 text-black bg-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400"
-        />
+        <input type="text" id="name" placeholder="Name"/>
+        <input type="email" id="email" placeholder="Email"/>
+        <input type="password" id="password" placeholder="Password"/>
+        <input type="tel" id="phone" placeholder="Phone" />
+        <input type="text" id="address" placeholder="Address"/>
 
         <a
           className="h-12 w-full my-4 bg-green text-black rounded-full flex items-center justify-center text-lg font-semibold hover:bg-teal-200 transition duration-200"
