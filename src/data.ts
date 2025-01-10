@@ -1,0 +1,35 @@
+export   const courses = [
+  {
+    id: 1,
+    title: 'Music Theory Fundamentals',
+    description:
+      'Master the basics of music theory through interactive songs',
+    duration: '8 weeks',
+    rating: 4.8,
+    students: 1234,
+    instructor: 'Sarah Johnson',
+    points: 500,
+    featured: true,
+  },
+  {
+    id: 2,
+    title: 'Mathematical Melodies',
+    description: 'Learn mathematics concepts through catchy tunes',
+    duration: '6 weeks',
+    rating: 4.6,
+    students: 856,
+    instructor: 'Dr. Michael Chen',
+    points: 450,
+  },
+  {
+    id: 3,
+    title: 'Science in Songs',
+    description: 'Explore scientific concepts through musical learning',
+    duration: '10 weeks',
+    rating: 4.9,
+    students: 2156,
+    instructor: 'Prof. Emily Brown',
+    points: 600,
+    featured: true,
+  },
+];
