@@ -14,6 +14,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 
   const isAuthRoute = pathName?.includes('auth');
 
+  if (pathName == '/') {
+    return <>{children}</>;
+  }
   if (isAuthRoute) {
     return <AuthLayout>{children}</AuthLayout>;
   }

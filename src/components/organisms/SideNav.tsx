@@ -13,6 +13,7 @@ import {
   Users,
   Video,
 } from 'lucide-react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -28,7 +29,7 @@ const SideNav = () => {
   }, [sideNavExpanded]);
 
   const menuItems = [
-    { icon: Home, label: 'Dashboard', badge: null, link: '/' },
+    { icon: Home, label: 'Dashboard', badge: null, link: '/dashboard' },
     { icon: Music, label: 'My Library', badge: '23', link: '/library' },
     { icon: BookOpen, label: 'Courses', badge: '4', link: '/courses' },
     { icon: Video, label: 'Live Classes', badge: 'Live', link: '/live' },
@@ -49,7 +50,9 @@ const SideNav = () => {
         {sideNavExpanded && (
           <div className="flex items-center space-x-2">
             <Music className="h-8 w-8 text-indigo-600" />
-            <span className="font-bold text-xl">EduSongs</span>
+            <Link href={'/'} className="font-bold text-xl">
+              EduSongs
+            </Link>
           </div>
         )}
         <button
