@@ -1,13 +1,23 @@
 'use client';
 import TopBar from '@/components/organisms/NavBar';
 import SideNav from '@/components/organisms/SideNav';
+import { usePathname } from 'next/navigation';
 import React from 'react';
+import AuthLayout from '../AuthLayout';
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
+  const pathName = usePathname();
+
+  const isAuthRoute = pathName?.includes('auth');
+
+  if (isAuthRoute) {
+    return <AuthLayout>{children}</AuthLayout>;
+  }
+
   return (
     <div className="grid grid-cols-[auto_1fr] h-screen overflow-hidden">
       <SideNav />
