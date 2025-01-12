@@ -1,18 +1,18 @@
-'use client';
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Play, Info } from 'lucide-react';
-import Row from '@/components/organisms/Row';
-import { categories, songs } from '@/data';
-import Button from '@/components/atoms/Button';
-import { useRouter } from 'next/navigation';
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { Play, Info } from "lucide-react";
+import Row from "@/components/organisms/Row";
+import { categories, songs } from "@/data";
+import Button from "@/components/atoms/Button";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
-  const [currentCategory, setCurrentCategory] = useState('all');
+  const [currentCategory, setCurrentCategory] = useState("all");
 
   const router = useRouter();
 
-  const isLoggedIn = localStorage.getItem('auth');
+  const isLoggedIn = localStorage.getItem("auth");
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -26,8 +26,8 @@ const HomePage = () => {
                   key={category.id}
                   className={`text-sm ${
                     currentCategory === category.id
-                      ? 'font-bold'
-                      : 'text-gray-300'
+                      ? "font-bold"
+                      : "text-gray-300"
                   }`}
                   onClick={() => setCurrentCategory(category.id)}
                 >
@@ -41,8 +41,8 @@ const HomePage = () => {
             <div className="flex gap-2">
               <button
                 onClick={() => {
-                  localStorage.removeItem('auth');
-                  router.push('/');
+                  localStorage.removeItem("auth");
+                  router.push("/");
                 }}
                 className="text-sm"
               >
@@ -50,18 +50,19 @@ const HomePage = () => {
               </button>
               <Button
                 label="Dashboard"
-                onClick={() => router.push('/dashboard')}
+                outlined={true}
+                onClick={() => router.push("/dashboard")}
               />
             </div>
           ) : (
             <div className="flex gap-2">
               <Button
                 label="Sign up"
-                onClick={() => router.push('/auth/signup')}
+                onClick={() => router.push("/auth/signup")}
               />
               <Button
                 label="Login"
-                onClick={() => router.push('/auth/login')}
+                onClick={() => router.push("/auth/login")}
               />
             </div>
           )}
